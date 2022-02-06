@@ -36,6 +36,7 @@
         .form-container{
             grid-template-rows: auto 1fr auto;
             width: 300px;
+            justify-items: center;
         }
         .logo{
             width: 150px;
@@ -56,24 +57,14 @@
             margin-top: 0;
             margin-bottom: 30px;
         }
-        .form {
-            display: flex ;
-            flex-direction: column;
-        }
+
+        
         .label{
             font-size: var(--sm);
             font-weight: bold;
-            margin-bottom: 4PX;
+            margin-bottom: 5PX;
         }
-        .input{
-            background-color: var(--Text-input-field);
-            border: ;
-            border-radius: 8px;
-            height: 30px;
-            font-size: var(--lg);
-            padding: 6px;
-            margin-bottom: 12px;
-        }
+      
         .primary-button{
             background-color: var(--Hospital-green);
             border-radius: 8px;
@@ -94,6 +85,31 @@
                 display: block;
             }
         }
+        .email-image{
+            width: 132px;
+            height: 132px;
+            border-radius: 50%;
+            background-color: var(--Text-input-field);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+        .email-image img {
+            width: 80px; 
+        }
+        
+        .resend{
+            font-size: var(--sm);
+        } 
+
+        .resend span{
+            color: var(--very-light-pink);
+        }
+        .resend a{
+            color: var(--Hospital-green);
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -102,17 +118,18 @@
         <div class="form-container"><!--Creating a container for the form-->
             <img src="./Platzi_YardSale_Logos/logo_yard_sale.svg" alt="logo" class="logo">
             <!--Adding an image-->
-            <h1 class="tittle">Create a new password</h1><!--Adding the tittle-->
-            <p class="subtitle">enter a new password for your account</p><!--Adding the subtittle-->
-            <form action="/" class="form">
-            <label for="password">Password:</label>
-            <input type="password" id="password" placeholder="xxxxxxxx" class="input input-password">
 
-            <label for="new-password">New Password:</label>
-            <input type="password" id="new-password" placeholder="xxxxxxxx" class="input input-password">
-            
-            <input type="submit" value="Confirm" class="primary-button login-button">
-            </form>
+            <h1 class="tittle">Email has been sent!</h1><!--Adding the tittle-->
+            <p class="subtitle">Please check your inbox for instructions of how to reset the password </p><!--Adding the subtittle-->
+            <div class="email-image">
+                <img src="./Platzi_YardSale_Icons/email.svg" alt="e-mail">
+                
+            </div>  
+            <button class="primary-button login-button">Login</button>  
+
+            <p class="resend">
+                <span>Didn t receive the email </span><a href="/">resend</a>
+            </p>
         </div>
     </div>
 </body>
